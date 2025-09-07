@@ -3,7 +3,7 @@ import axios from 'axios';
 import { getToken } from '../utils/auth';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000', // backend URL
+  baseURL: process.env.NEXT_PUBLIC_API_URL, // backend URL
 });
 
 api.interceptors.request.use(config => {
